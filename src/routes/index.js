@@ -25,7 +25,7 @@ const routes = {
       load: () => import(/* webpackChunkName: 'contact' */ './contact'),
     },
     {
-      path: '/testing/:username',
+      path: '/testing/:make/:id',
       load: () => import(/* webpackChunkName: 'testing' */ './testing'),
     },
     {
