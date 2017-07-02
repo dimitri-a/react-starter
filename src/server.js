@@ -122,11 +122,13 @@ app.get('*', async (req, res, next) => {
       query: req.query,
     });
 
+
     if (route.redirect) {
       res.redirect(route.status || 302, route.redirect);
       return;
     }
-
+// todo remove
+    debugger;
     const data = { ...route };
     data.children = ReactDOM.renderToString(<App context={context}>{route.component}</App>);
     data.styles = [
